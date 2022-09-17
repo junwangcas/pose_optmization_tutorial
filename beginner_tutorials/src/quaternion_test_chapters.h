@@ -15,7 +15,6 @@ class QuaternionTestChapters {
     ~QuaternionTestChapters();
 
     void Chapter12();
-
 };
 
 

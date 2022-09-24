@@ -11,8 +11,20 @@ add_executable(quaternion_test src/quaternion_test.cpp src/quaternion_test_chapt
 target_link_libraries(quaternion_test ${catkin_LIBRARIES})
 
 
-add_executable(lie_group_test lie_group/visualization/main.cpp lie_group/visualization/camera_pose_vis.cpp)
-target_link_libraries(lie_group_test ${catkin_LIBRARIES})
+
+add_executable(test_vis
+        lie_group/visualization/main.cpp
+        lie_group/visualization/land_mark_vis.cpp
+        lie_group/visualization/camera_pose_vis.cpp
+        )
+target_link_libraries(test_vis ${catkin_LIBRARIES})
+
+add_executable(test_gendata
+        lie_group/generate_data/generate_data.cpp
+        lie_group/generate_data/main.cpp)
+
+
+
 
 
 

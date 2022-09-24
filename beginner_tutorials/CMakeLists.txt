@@ -10,6 +10,12 @@ include_directories(${catkin_INCLUDE_DIRS} ${EIGEN3_INCLUDE_DIR})
 add_executable(quaternion_test src/quaternion_test.cpp src/quaternion_test_chapters.cpp)
 target_link_libraries(quaternion_test ${catkin_LIBRARIES})
 
+
+add_executable(lie_group_test lie_group/visualization/main.cpp lie_group/visualization/camera_pose_vis.cpp)
+target_link_libraries(lie_group_test ${catkin_LIBRARIES})
+
+
+
 catkin_install_python(PROGRAMS scripts/talker.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )

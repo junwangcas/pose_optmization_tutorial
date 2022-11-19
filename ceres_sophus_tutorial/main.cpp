@@ -10,10 +10,11 @@
 using namespace std;
 using namespace Eigen;
 //using namespace ceres;
- 
+
 typedef Matrix<double, 6, 6> Matrix6d;
 typedef Matrix<double, 6, 1> Vector6d;
  
+// for txt file info
 typedef struct {
     int id = 0;
     double param[7] = {0};
@@ -120,7 +121,7 @@ void Convert2se3(param_type &_p){
 int main(int argc, char **argv) {
  
     google::InitGoogleLogging(argv[0]);
- 
+
     string fin_path = "../sphere.g2o";
  
     ceres::Problem problem;
@@ -128,7 +129,7 @@ int main(int argc, char **argv) {
  
     ifstream fin;
     fin.open(fin_path);
-   assert(fin.is_open());
+    assert(fin.is_open());
     ceres::LocalParameterization *local_param = new Parameterization();
     while(!fin.eof()){
         string name;

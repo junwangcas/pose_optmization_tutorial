@@ -7,8 +7,8 @@ find_package(Ceres REQUIRED)
 
 include_directories(/usr/local/stow/sophus/include/)
 include_directories(${EIGEN3_INCLUDE_DIR})
-add_executable(untitled6 main.cpp)
-target_link_libraries(untitled6 ${CERES_LIBRARIES} fmt)
+add_executable(ceres_sophus main.cpp)
+target_link_libraries(ceres_sophus ${CERES_LIBRARIES} fmt)
 
 #add_executable(test test.cpp)
 #target_link_libraries(test ${CERES_LIBRARIES} fmt)
